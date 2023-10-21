@@ -319,3 +319,96 @@ void main() {
    - Objects are instances of classes created using the `class_name()` syntax.
    - Properties are set and accessed using the dot notation (`object.property`).
    - Methods define the behavior of objects and can be invoked using the dot notation (`object.method()`).
+
+
+
+# Flutter Introduction and Simple Calculator App
+
+In this lecture, we will introduce Flutter, an open-source UI development kit by Google, and explore a basic Flutter app for a simple calculator. We'll break down the provided code to understand Flutter's structure and widgets. Here's a structured explanation of the code:
+
+### Introduction to Flutter
+- **What is Flutter?**
+  - Flutter is an open-source UI software development kit created by Google.
+  - It is used to develop applications for mobile, web, and desktop from a single codebase.
+- **Why use Flutter?**
+  - Cross-platform development.
+  - Fast development and hot-reloading.
+  - Rich set of widgets and tools.
+  - Excellent community support.
+
+### Overview of the Provided Code
+- We have a basic Flutter app for a simple calculator.
+- We will dissect the code to understand Flutter's structure and widgets.
+
+### Exploring the MaterialApp Widget
+- The `MaterialApp` widget is like the main container for your Flutter app. It's what wraps everything together. You can think of it as the cover of a book that holds all the pages inside. Here's what it does in simple terms:
+
+- **It's the Boss:** `MaterialApp` is the boss of your app. It manages how the app looks and works.
+
+- **No Debug Signs:** You can tell it not to show any "debug" signs or banners. It's like turning off the "Under Construction" signs when your app is ready to show to others.
+
+- **Home Sweet Home:** It also decides which part of your app is the "home." Just like in a house, the "home" is where you start. In our code, `MyApp()` is our home.
+
+
+### Building the App's Structure
+Certainly, let's delve into the section titled "Building the App's Structure."
+
+### Building the App's Structure
+1. **Create the `MyApp` Class:**
+
+In our Flutter app, we have something called a class named `MyApp`. Think of it as a blueprint or a plan for your app. We create this class to organize how our app should work and look. It's like making a detailed plan before building a house.
+
+2. **It's a `StatefulWidget`:**
+
+    Now, this is a bit more technical. We say that `MyApp` is a `StatefulWidget` because it can change or have a different state over time. In simpler terms, it means our app can do different things at different times. For example, when you press a button on the calculator, the app needs to update the numbers and the result. This class helps us do that by keeping track of what's happening.
+
+3. **Introduce `TextEditingController` and Its Purpose:**
+
+    Next, we have something called a `TextEditingController`. This is like a remote control for the text fields where you type numbers in the app. When you type on your computer keyboard or phone screen, the app needs a way to understand what you typed. That's where the `TextEditingController` comes in. It helps the app read what you typed and do something with it, like adding or subtracting numbers in our calculator.
+
+4. **Define `num1`, `num2`, and `result` Variables:**
+
+    In any calculator, you have numbers that you want to calculate with. So, we create three special spots in our app's memory: `num1`, `num2`, and `result`. Think of them like containers or boxes where we store these numbers:
+
+    - `num1` is where we put the first number you enter.
+    - `num2` is where we store the second number.
+    - `result` is where we keep the answer after doing some math.
+
+    These variables help the app remember the numbers you type and the result of calculations.
+
+So, in this part of the code, we're essentially creating a plan for our app (the `MyApp` class), making sure it can change and adapt (as a `StatefulWidget`), and giving it the tools it needs to understand and work with the numbers you input (using `TextEditingController`) and a way to remember those numbers and the results (with `num1`, `num2`, and `result` variables).
+
+### Adding Functions for Arithmetic Operations
+- Explain the `add()`, `sub()`, `mul()`, and `div()` functions.
+- In each function, we parse input values, perform the operation, and update the result.
+- Emphasize the use of `setState` for updating the UI.
+
+### Building the App UI
+- The `Scaffold` widget is used to create a basic app structure.
+- The `AppBar` widget defines the app bar.
+  - Discuss the title and background color properties.
+
+### Designing the Calculator Interface
+- Create a `Column` widget to organize the UI vertically.
+- Introduce `SizedBox` for spacing between widgets.
+- Add two `TextField` widgets for user input.
+  - Discuss the `controller` and decoration.
+- Display the result using a `Text` widget.
+
+### Creating Buttons for Operations
+- Use `ElevatedButton` for the operation buttons.
+- Explain the `onPressed` property to handle button clicks.
+- Discuss clearing the input fields after addition.
+- Create rows of buttons for addition, subtraction, multiplication, and division.
+
+### Putting It All Together
+- Explain that we have created a functional simple calculator app.
+- Highlight that this is just the beginning of what Flutter can do.
+- Encourage students to explore more complex widgets and concepts.
+
+### Practical Demonstration
+- Live coding to show the app in action.
+- Explain how to set up a Flutter development environment.
+- Show hot-reloading in action.
+
+By elaborating on these points using the provided code snippets, you can deliver a thorough and engaging 2.5-hour lecture on Flutter and the creation of a simple calculator app.
