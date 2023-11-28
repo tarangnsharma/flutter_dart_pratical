@@ -31,40 +31,48 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("User Info"),
+        backgroundColor: Colors.blue,
+        centerTitle: true,
       ),
       body: Form(
         key: formKey,
         child: Column(
           children: [
             const SizedBox(height: 10),
-            TextFormField(
-              controller: name,
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Please Enter Your Name';
-                }
-                return null;
-              },
-              decoration: InputDecoration(
-                labelText: "Enter Your Name",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: TextFormField(
+                controller: name,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please Enter Your Name';
+                  }
+                  return null;
+                },
+                decoration: InputDecoration(
+                  labelText: "Enter Your Name",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
             ),
             const SizedBox(height: 10),
-            TextFormField(
-              controller: id,
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return 'Please Enter your ID';
-                }
-                return null;
-              },
-              decoration: InputDecoration(
-                labelText: "Enter your ID",
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(15),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: TextFormField(
+                controller: id,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return 'Please Enter your ID';
+                  }
+                  return null;
+                },
+                decoration: InputDecoration(
+                  labelText: "Enter your ID",
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                 ),
               ),
             ),
@@ -161,13 +169,16 @@ class NextScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          Text("Name: $name"),
-          Text("Id: $id"),
-          Text("Gender: $gender"),
-          Text("Hobbies: $hobbies"),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Name: $name"),
+            Text("Id: $id"),
+            Text("Gender: $gender"),
+            Text("Hobbies: $hobbies"),
+          ],
+        ),
       ),
     );
   }
